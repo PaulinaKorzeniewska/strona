@@ -1,0 +1,11 @@
+# pliki systemowe
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# lokalne ustawienia Claude Code
+.claude/settings.local.json
+
+# kopie i archiwa
+*.zip
+*.log

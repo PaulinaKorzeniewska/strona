@@ -1,0 +1,6 @@
+# Teksty zawsze z końcami linii LF (tak samo na Windows i macOS); grafiki i fonty jako pliki binarne.
+* text=auto eol=lf
+*.jpg binary
+*.png binary
+*.ico binary
+*.woff2 binary

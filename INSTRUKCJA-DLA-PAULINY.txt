@@ -1,0 +1,88 @@
+JAK EDYTOWAĆ SWOJĄ STRONĘ Z POMOCĄ CLAUDE
+==========================================
+
+W tym folderze jest cała Twoja strona (wersja 3):
+
+  index.html      - strona (tekst, układ, kolory, wszystko w jednym pliku)
+  img/            - zdjęcia i okładki
+  fonts/          - kroje pisma
+  CLAUDE.md       - opis projektu dla Claude (tego pliku nie musisz czytać ani zmieniać)
+
+Żeby zobaczyć stronę, kliknij dwukrotnie plik index.html. Otworzy się w przeglądarce.
+
+
+KROK 0. ROZPAKUJ PLIK ZIP
+-------------------------
+Rozpakuj otrzymany ZIP w stałym miejscu, np. Dokumenty > strona-paulina-korzeniewska.
+Pracuj zawsze na tym jednym folderze.
+
+
+SPOSÓB A (ZALECANY): APLIKACJA CLAUDE NA KOMPUTER, TRYB COWORK
+--------------------------------------------------------------
+Claude zmienia wtedy pliki bezpośrednio w Twoim folderze. Nie trzeba niczego pobierać ani podmieniać.
+Potrzebujesz płatnego planu Claude (Pro lub wyższego) i komputera z Windows albo macOS.
+
+1. Pobierz aplikację ze strony https://claude.com/download, zainstaluj ją i zaloguj się.
+2. Zacznij nowe zadanie. Jeśli w polu wiadomości widzisz przełącznik "Chat / Cowork", wybierz "Cowork".
+   Jeśli go nie ma, po prostu zacznij nową rozmowę.
+3. Udostępnij Claude folder strony. Użyj opcji dodania folderu w oknie zadania i wskaż
+   folder "strona-paulina-korzeniewska".
+4. Napisz pierwszą wiadomość, np.:
+
+   "W podłączonym folderze jest moja strona internetowa. Najpierw przeczytaj plik CLAUDE.md,
+    a potem pomóż mi ją edytować. Zmieniaj tylko to, o co poproszę."
+
+5. Proś o zmiany po kolei (przykłady niżej). Gdy Claude zapyta o zgodę na zapis pliku, zatwierdź.
+6. Po każdej zmianie odśwież index.html w przeglądarce (klawisz F5, na Macu Cmd+R).
+7. Podczas pracy aplikacja Claude musi być otwarta.
+
+
+SPOSÓB B: PRZEGLĄDARKA (claude.ai), TEŻ NA DARMOWYM KONCIE
+----------------------------------------------------------
+1. Zaloguj się na https://claude.ai.
+2. Wejdź w Ustawienia > Capabilities i włącz "Code execution and file creation".
+3. Zacznij nową rozmowę i dołącz (ikona spinacza) dwa pliki: index.html i CLAUDE.md.
+   Jeśli zmiana dotyczy zdjęcia lub okładki, dołącz też ten plik graficzny.
+4. Napisz np.:
+
+   "Przeczytaj CLAUDE.md. W index.html wpisz mój e-mail: ... . Daj mi poprawiony plik do pobrania."
+
+5. Pobierz nowy index.html i zastąp nim stary plik w folderze strony.
+   Nowe zdjęcia i okładki wrzuć do folderu img/.
+
+
+JAK PROSIĆ O ZMIANY (PRZYKŁADY)
+-------------------------------
+Jedna, konkretna prośba naraz działa najlepiej. Podawaj nazwę sekcji:
+O mnie, Twórczość, Tłumaczenia, Kontakt.
+
+  - "W sekcji Kontakt zmień adres e-mail na: ..."
+  - "W sekcji Twórczość > Poezja dodaj tomik: tytuł ..., wydawnictwo ..., rok ... . Okładka to plik img/okladka-....jpg."
+  - "W Scenariuszach dodaj: ..."
+  - "Zmień zdanie ... na ..."
+  - "Przepisz sekcję O mnie na pierwszą osobę."
+
+Po większej zmianie sprawdź też wygląd na telefonie: zwęź okno przeglądarki
+albo otwórz plik na telefonie.
+
+
+CO JESZCZE JEST DO UZUPEŁNIENIA
+-------------------------------
+  Nic. Wszystkie zastępniki zostały wypełnione.
+
+
+KOPIA ZAPASOWA
+--------------
+Przed większymi zmianami skopiuj cały folder i dopisz do nazwy datę,
+np. "strona-paulina-korzeniewska-kopia-2026-10-20". Jeśli coś pójdzie nie tak,
+wrócisz do tej wersji.
+
+
+GDY STRONA BĘDZIE GOTOWA
+------------------------
+Spakuj folder do ZIP i wyślij Łukaszowi. On wgra stronę na serwer.
+Na serwer trafiają tylko: index.html, robots.txt, favicon.ico, apple-touch-icon.png oraz foldery img/ i fonts/.
+
+Uwaga: wersja robocza jest ukryta przed wyszukiwarkami (znacznik "noindex" w index.html i plik
+robots.txt). Przy publikacji na docelowej domenie trzeba to zdjąć i wpisać adres domeny w znacznikach
+og:url, og:image i canonical. Poproś Claude: "Przygotuj stronę do publikacji pod adresem https://...".

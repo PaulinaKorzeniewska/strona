@@ -1,0 +1,6 @@
+# WERSJA ROBOCZA: blokuje roboty wyszukiwarek.
+# PRZED PUBLIKACJĄ NA DOCELOWEJ DOMENIE zamienić całą treść tego pliku na:
+#   User-agent: *
+#   Allow: /
+User-agent: *
+Disallow: /
