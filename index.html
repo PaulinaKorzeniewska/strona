@@ -225,7 +225,10 @@ main > .sec:last-child { padding-bottom: var(--section); }
    Po dodaniu href="https://…" działa jak zwykły link, a po najechaniu wypełnia się na czarno. */
 .buy { display: flex; align-items: center; width: fit-content; min-height: 44px; margin-top: 20px; padding: 0 22px; border: 1px solid var(--ink); font-family: var(--grot); font-size: 13px; font-weight: 500; line-height: 1; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
 a.buy[href]:hover { background: var(--ink); color: var(--paper); }
-.feature-cover .buy { margin: 24px auto 0; } /* wyśrodkowany pod okładką */
+/* „U Twojego Boku”: na szerokim ekranie przycisk wyśrodkowany pod opisem (.feature-body),
+   na telefonie (do 700 px) pod okładką. W kodzie są dwa przyciski, zawsze widoczny jest jeden. */
+.feature-cover .buy { display: none; margin: 24px auto 0; }
+.feature-body .buy { margin: 36px auto 0; }
 .poetry { margin-top: calc(var(--section) * 1.25); }
 .books { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; row-gap: 56px; }
 .book { margin: 0; grid-row: span 2; display: grid; grid-template-rows: subgrid; row-gap: 0; }
@@ -306,6 +309,8 @@ a.buy[href]:hover { background: var(--ink); color: var(--paper); }
     .about-photo, .about-text, .feature-cover, .feature-body { grid-column: 1 / -1 !important; grid-row: auto !important; }
   .about-photo { max-width: 300px; margin-bottom: 28px; }
   .feature-cover { max-width: 300px; margin-bottom: 28px; }
+  .feature-cover .buy { display: flex; }
+  .feature-body .buy { display: none; }
   .quote blockquote { line-height: 1.15; }
   .books { grid-template-columns: minmax(0, 1fr); row-gap: 48px; }
   .book { display: block; grid-row: auto; max-width: 300px; }
@@ -396,6 +401,8 @@ a.buy[href]:hover { background: var(--ink); color: var(--paper); }
           <div><dt>Ilustracje</dt><dd>Marianna Radke</dd></div>
           <div><dt>Rok wydania</dt><dd>2024</dd></div>
         </dl>
+        <!-- Ten sam przycisk co pod okładką (ten widać na szerokim ekranie). Link dopisz w obu miejscach. -->
+        <a class="buy">Kup teraz</a>
       </div>
     </div>
 

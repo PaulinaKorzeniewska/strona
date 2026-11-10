@@ -82,7 +82,7 @@ Inspiracja: redakcyjna strona o poecie A.R. Ammonsie. Charakter: szary papier z 
 - **Okładki książek mają jedną szerokość** (od 9 XI 2026): na komputerze 3 kolumny siatki, na tablecie 1/3 szerokości, na telefonie do 300 px. Bez szarego tła pod okładką. Wysokość wynika z proporcji okładki (nie przycinaj okładek), więc wyższe okładki wystają w górę, a podpisy i przyciski w rzędzie stoją na jednej linii (`.books` + `subgrid`).
   - Okładka „Usta Vivien Leigh” (oryginalnie 480×969, wąska) jest poszerzona do proporcji pozostałych (656×969) przez dołożenie jej białego tła po bokach, bez skalowania i przycinania grafiki. Skan był przycięty z lewej, więc ilustracja kończy się tam prostą krawędzią. Jeśli Paulina ma lepszy skan, podmień plik.
   - Nowe okładki najlepiej w proporcjach ok. 2:3 (szerokość ≈ 0,68 wysokości), żeby rząd był równy.
-- **Przycisk „Kup teraz”** (`.buy`) jest wyśrodkowany pod każdą książką: w Poezji pod opisem tomiku, w bloku „Dla dzieci” pod okładką. Na razie to `<a class="buy">` bez `href`, więc nie reaguje na kliknięcie. Jak podpiąć sklep: patrz niżej.
+- **Przycisk „Kup teraz”** (`.buy`) jest wyśrodkowany pod każdą książką: w Poezji pod opisem tomiku; w bloku „Dla dzieci” na szerokim ekranie (od 701 px) na środku pod opisem, a na telefonie pod okładką (w kodzie są dwa przyciski, CSS pokazuje jeden – link trzeba dopisać w obu). Na razie to `<a class="buy">` bez `href`, więc nie reaguje na kliknięcie. Jak podpiąć sklep: patrz niżej.
 - Zdjęcia osób są czarno-białe (klasa `.bw`). Okładki książek zostają kolorowe.
 - Bez zaokrągleń, bez cieni na elementach interfejsu. Wyjątkiem jest delikatny cień samych okładek.
 - **Linie (od 9 XI 2026):** zostały tylko linie nad tytułami „O mnie” i „Twórczość” oraz krótka kreska nad „Scenarzystka, poetka, tłumaczka” w hero. Tytuły „Tłumaczenia” i „Napisz do mnie”, podtytuły, metryczka książki, kolumny w Kontakcie i scenariusze są bez linii. Nie dodawaj nowych linii bez prośby, bo strona staje się nieczytelna.
@@ -93,7 +93,7 @@ Inspiracja: redakcyjna strona o poecie A.R. Ammonsie. Charakter: szary papier z 
 2. ~~Motto jako osobna sekcja~~ – od 9 XI 2026 motto jest częścią hero.
 3. **O mnie** (`#o-mnie`): bez podtytułu, zdjęcie (`img/portret-2.jpg`) i jeden lead. Bez liczb i statystyk.
 4. **Twórczość** (`#tworczosc`):
-   - **Dla dzieci**: wyróżniony blok „U Twojego Boku” (okładka, opis, metryczka `.meta` tylko: ilustracje i rok wydania; „Kup teraz” pod okładką).
+   - **Dla dzieci**: wyróżniony blok „U Twojego Boku” (okładka, opis, metryczka `.meta` tylko: ilustracje i rok wydania; „Kup teraz” pod opisem, na telefonie pod okładką).
    - **Poezja**: siatka `.books` z okładkami. Tomiki od najnowszego: „Mniej” (2022), „Pogodna biel dobrego samopoczucia” (2016, Dom Literatury w Łodzi), „Usta Vivien Leigh” (2011). Bez liczby stron. Pod każdym opisem „Kup teraz”.
    - **Scenariusze**: programy rozwojowe i wyróżnienia (`.script-list`): siatka bez linii (3 kolumny, tablet 2, telefon 1), w każdej pozycji rok, nazwa i opis. Script Fiesta 2025, Final Draft Special Award 2025, Young Horizons Lab 2025, Scenarzystki na Horyzoncie 2026, Warsaw Next 2026, ScriptzONA 2026.
 5. **Tłumaczenia** (`#tlumaczenia`, ciemne tło): bez linii nad tytułem i bez podtytułu (dawny „Przekład” usunięty 9 XI 2026), jeden akapit o przekładzie audiowizualnym i zaproszenie do kontaktu.
