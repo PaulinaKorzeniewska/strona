@@ -6,7 +6,17 @@ Ten plik opisuje projekt dla asystenta Claude. Przeczytaj go w całości, zanim 
 
 To jednostronicowa strona-wizytówka Pauliny Korzeniewskiej. Paulina jest poetką, autorką książki dla dzieci, scenarzystką i tłumaczką języka angielskiego. Ma doktorat z nauk humanistycznych. Strona jest po polsku.
 
-Paulina edytuje stronę sama, z pomocą Claude. Gotowe pliki trafiają na serwer jej znajomego (Łukasz), który wgrywa je przez FTP.
+Strona jest w repozytorium GitHub `PaulinaKorzeniewska/strona` i publikuje się przez GitHub Pages pod adresem https://paulinakorzeniewska.com (domena w pliku `CNAME`). Każda zmiana w gałęzi `main` jest po 1–2 minutach widoczna dla wszystkich.
+
+Paulina edytuje stronę sama, przez Claude Code w przeglądarce (claude.ai/code): każda zmiana to osobna gałąź i propozycja zmiany (PR), którą Paulina zatwierdza na GitHubie (Merge). Jej instrukcja krok po kroku: `INSTRUKCJA-DLA-PAULINY.md`. Pomaga jej Łukasz, który czasem wysyła zmiany bezpośrednio do `main`.
+
+## Jak rozmawiać z Pauliną
+
+- Paulina nie jest osobą techniczną. Pisz po polsku, prostymi słowami, bez żargonu; nazwy plików i kodu podawaj tylko wtedy, gdy są potrzebne.
+- Jedna sprawa w jednej rozmowie. Jeśli prośba jest niejasna, dopytaj, zanim zmienisz stronę.
+- Na koniec napisz krótko, co zmieniłeś i gdzie to widać na stronie, i przypomnij: „Kliknij **Create PR**, potem na GitHubie **Merge pull request** → **Confirm merge**”.
+- Nie scalaj zmian do `main` sam. Zatwierdzenie należy do Pauliny.
+- Nowe zdjęcia Paulina wgrywa sama na GitHubie do `img/` (instrukcja to opisuje). Zdjęcia wklejonego do czatu nie da się zapisać jako pliku strony.
 
 ## Pliki
 
@@ -16,13 +26,15 @@ img/         zdjęcia, okładki (JPG) i og.jpg (obraz do udostępniania linku, 1
 fonts/       kroje pisma (woff2, licencja SIL OFL)
 favicon.ico, apple-touch-icon.png   ikony strony
 robots.txt   na czas wersji roboczej blokuje roboty (patrz niżej)
+CNAME        domena dla GitHub Pages (paulinakorzeniewska.com) – nie zmieniaj i nie usuwaj
 CLAUDE.md    ten plik
-INSTRUKCJA-DLA-PAULINY.txt   instrukcja dla Pauliny (nie jest częścią strony)
+README.md    krótki opis repozytorium
+INSTRUKCJA-DLA-PAULINY.md   instrukcja dla Pauliny: edycja strony przez Claude w przeglądarce (nie jest częścią strony)
 ```
 
-Na serwer trafiają tylko `index.html`, `robots.txt`, `favicon.ico`, `apple-touch-icon.png`, `img/` i `fonts/`.
+GitHub Pages publikuje zawartość gałęzi `main`. Repozytorium jest publiczne, więc pliki z opisami (`README.md`, `CLAUDE.md`, instrukcja) też może zobaczyć każdy.
 
-**Wersja robocza (noindex):** `index.html` ma `<meta name="robots" content="noindex, nofollow">`, a `robots.txt` ma `Disallow: /`. Przed publikacją na docelowej domenie trzeba to zdjąć (instrukcja w komentarzach obu plików) oraz odkomentować w `<head>` znaczniki `og:url`, `og:image`, `canonical` i wpisać prawdziwą domenę zamiast `DOMENA`.
+**Wersja robocza (noindex):** strona działa już pod docelową domeną, ale `index.html` nadal ma `<meta name="robots" content="noindex, nofollow">`, a `robots.txt` ma `Disallow: /`, więc wyszukiwarki jej nie pokazują. Zdejmij to dopiero na prośbę Pauliny albo Łukasza (instrukcja w komentarzach obu plików), razem z odkomentowaniem w `<head>` znaczników `og:url`, `og:image`, `canonical`, gdzie zamiast `DOMENA` wpisz `paulinakorzeniewska.com`.
 
 ## Zasady, których trzymaj się zawsze
 
@@ -123,4 +135,6 @@ Bez `href` przycisk nie reaguje na kliknięcie. Przed publikacją strony albo po
 
 ## Podgląd
 
-Plik `index.html` otwiera się wprost w przeglądarce, podwójnym kliknięciem. Po każdej zmianie wystarczy odświeżyć kartę. Wersję na telefon sprawdzisz, zwężając okno albo w trybie urządzenia mobilnego w narzędziach deweloperskich przeglądarki.
+W claude.ai/code nie ma podglądu strony. Paulina widzi różnice w plikach na karcie **Changes**, a samą stronę dopiero po zatwierdzeniu (Merge), pod https://paulinakorzeniewska.com. Dlatego zmieniaj ostrożnie, sprawdzaj kod pod kątem telefonu (zasada 7) i opisz Paulinie, czego ma się spodziewać na stronie.
+
+Na komputerze plik `index.html` otwiera się wprost w przeglądarce, podwójnym kliknięciem. Wersję na telefon sprawdzisz, zwężając okno albo w trybie urządzenia mobilnego w narzędziach deweloperskich przeglądarki.
