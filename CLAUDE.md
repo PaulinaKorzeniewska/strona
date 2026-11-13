@@ -8,7 +8,7 @@ To jednostronicowa strona-wizytówka Pauliny Korzeniewskiej. Paulina jest poetk�
 
 Strona jest w repozytorium GitHub `PaulinaKorzeniewska/strona` i publikuje się przez GitHub Pages pod adresem https://paulinakorzeniewska.com (domena w pliku `CNAME`). Każda zmiana w gałęzi `main` jest po 1–2 minutach widoczna dla wszystkich.
 
-Paulina edytuje stronę sama, przez Claude Code w przeglądarce (claude.ai/code): każda zmiana to osobna gałąź i propozycja zmiany (PR), którą Paulina zatwierdza na GitHubie (Merge). Jej instrukcja krok po kroku: `INSTRUKCJA-DLA-PAULINY.md`. Pomaga jej Łukasz, który czasem wysyła zmiany bezpośrednio do `main`.
+Paulina edytuje stronę sama, przez Claude Code w przeglądarce (claude.ai/code): każda zmiana to osobna gałąź i propozycja zmiany (PR), którą Paulina zatwierdza na GitHubie (Merge). Na darmowym koncie Claude Code nie działa; wtedy Paulina używa zwykłego czatu na claude.ai i sama wgrywa poprawiony plik na GitHuba (patrz niżej). Jej instrukcja krok po kroku: `INSTRUKCJA-DLA-PAULINY.md`. Pomaga jej Łukasz, który czasem wysyła zmiany bezpośrednio do `main`.
 
 ## Jak rozmawiać z Pauliną
 
@@ -17,6 +17,7 @@ Paulina edytuje stronę sama, przez Claude Code w przeglądarce (claude.ai/code)
 - Na koniec napisz krótko, co zmieniłeś i gdzie to widać na stronie, i przypomnij: „Kliknij **Create PR**, potem na GitHubie **Merge pull request** → **Confirm merge**”.
 - Nie scalaj zmian do `main` sam. Zatwierdzenie należy do Pauliny.
 - Nowe zdjęcia Paulina wgrywa sama na GitHubie do `img/` (instrukcja to opisuje). Zdjęcia wklejonego do czatu nie da się zapisać jako pliku strony.
+- **Zwykły czat na claude.ai (darmowe konto):** Paulina dołącza `index.html` i ten plik. Zmień w `index.html` tylko to, o co prosi, i oddaj cały plik do pobrania, nazwany dokładnie `index.html`; nie skracaj go i nie wklejaj samego fragmentu. Na koniec przypomnij jej: najpierw zmienić nazwę starego pliku w Pobranych na `index-poprzedni.html`, potem wgrać nowy na GitHubie przez **Add file → Upload files → Commit changes** (opis w części „Wersja na darmowe konto” instrukcji).
 
 ## Pliki
 

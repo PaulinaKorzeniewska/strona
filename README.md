@@ -15,7 +15,7 @@ Strona nie ładuje niczego z zewnętrznych serwerów, bo fonty są w `fonts/` (z
 | `robots.txt` | na czas wersji roboczej blokuje roboty wyszukiwarek |
 | `CNAME` | domena strony dla GitHub Pages |
 | `CLAUDE.md` | opis projektu i zasady edycji (dla Claude i dla ludzi) |
-| `INSTRUKCJA-DLA-PAULINY.md` | jak edytować stronę przez Claude w przeglądarce (claude.ai/code) |
+| `INSTRUKCJA-DLA-PAULINY.md` | jak edytować stronę przez Claude: plan Pro lub wyższy (claude.ai/code) i darmowe konto (zwykły czat) |
 
 ## Publikacja
 

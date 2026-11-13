@@ -3,6 +3,10 @@
 Instrukcja dla Pauliny: jak połączyć Claude z GitHubem i zmieniać stronę **paulinakorzeniewska.com**
 zwykłymi poleceniami, pisanymi po polsku.
 
+> **Którą wersję wybrać?**
+> - Masz plan Claude **Pro lub wyższy** – korzystaj z tej części (kroki 1–3 poniżej). Jest wygodniejsza i bezpieczniejsza.
+> - Masz **darmowe konto** Claude – przejdź do [wersji na darmowe konto](#wersja-na-darmowe-konto) na końcu tej instrukcji.
+
 ## Co będzie potrzebne
 
 - **Płatne konto Claude**, plan Pro lub wyższy. W darmowym planie ta funkcja (Claude Code w przeglądarce) nie działa.
@@ -92,3 +96,80 @@ Zdjęcie trzeba najpierw wgrać na GitHuba. Claude nie zapisze zdjęcia wklejone
 - **Gałąź main** – główna wersja strony. To ona jest widoczna pod paulinakorzeniewska.com.
 - **PR (pull request)** – propozycja zmiany. Niczego nie zmienia na stronie, dopóki jej nie zatwierdzisz.
 - **Merge** – zatwierdzenie propozycji. Po nim zmiana jest na stronie.
+
+---
+
+## Wersja na darmowe konto
+
+Jak zmieniać stronę z pomocą zwykłego czatu na claude.ai, wymieniając plik strony na GitHubie.
+Claude Code (część powyżej) w darmowym planie nie działa – ani w przeglądarce, ani w aplikacji na komputer.
+
+### Czym to się różni od wersji płatnej
+
+- Pobierasz plik strony, Claude go poprawia, a Ty wgrywasz nowy plik na GitHuba. Jest więcej klikania.
+- Zmiana trafia na stronę od razu, bez osobnego zatwierdzania.
+- Darmowy plan ma mały limit wiadomości.
+
+### Przygotowanie (raz)
+
+1. Na [claude.ai](https://claude.ai) wejdź w **Ustawienia (Settings) → Capabilities** i sprawdź, czy włączona jest opcja
+   **Code execution and file creation** (w nowszym wyglądzie: **Create and edit files**). Na darmowym koncie zwykle
+   jest już włączona. Dzięki niej Claude odda Ci gotowy plik do pobrania.
+2. Pobierz opis strony z zasadami dla Claude: otwórz [CLAUDE.md na GitHubie](https://github.com/PaulinaKorzeniewska/strona/blob/main/CLAUDE.md)
+   i kliknij ikonę **Download raw file** (strzałka w dół, nad treścią pliku, po prawej). Plik zapisze się w folderze **Pobrane**.
+
+### Poproś Claude o zmianę
+
+1. Otwórz [index.html na GitHubie](https://github.com/PaulinaKorzeniewska/strona/blob/main/index.html) i kliknij
+   **Download raw file**. To aktualna wersja strony. Zapisze się w **Pobrane** jako `index.html`.
+2. Na [claude.ai](https://claude.ai) zacznij nową rozmowę. Spinaczem dołącz dwa pliki z folderu Pobrane: `index.html` i `CLAUDE.md`.
+3. Wklej to polecenie i w miejscu kropek opisz zmianę (podaj nazwę sekcji: *O mnie*, *Twórczość*, *Tłumaczenia*, *Napisz do mnie*).
+   Na GitHubie przycisk kopiowania jest w prawym górnym rogu ramki:
+
+   ```text
+   W załączniku jest plik index.html mojej strony i plik CLAUDE.md z zasadami. Najpierw przeczytaj CLAUDE.md. Potem w index.html: … Zmieniaj tylko to, o co proszę. Daj mi gotowy plik do pobrania, nazwany dokładnie index.html, i napisz krótko, co zmieniłeś.
+   ```
+4. Przeczytaj odpowiedź Claude. Jeśli coś jest nie tak, napisz, co poprawić. Claude przygotuje nowy plik.
+
+### Wgraj nowy plik na GitHuba
+
+> **Strona jest publiczna.** Po wgraniu pliku (punkt 4) zmianę zobaczą wszyscy odwiedzający paulinakorzeniewska.com,
+> zwykle po 1–2 minutach.
+
+1. W folderze **Pobrane** zmień nazwę starego pliku z `index.html` na `index-poprzedni.html`. To Twoja kopia zapasowa.
+2. W rozmowie z Claude pobierz nowy plik `index.html`. Sprawdź w folderze Pobrane, że nazywa się dokładnie `index.html`
+   (nie np. `index (1).html`). Jeśli ma inną nazwę, zmień ją na `index.html`.
+3. Otwórz [github.com/PaulinaKorzeniewska/strona](https://github.com/PaulinaKorzeniewska/strona) (główny widok repozytorium,
+   nie folder img) i kliknij **Add file → Upload files**.
+4. Przeciągnij nowy `index.html` do okna i na dole kliknij zielony przycisk **Commit changes**. GitHub zastąpi stary plik nowym.
+5. Po 1–2 minutach otwórz [paulinakorzeniewska.com](https://paulinakorzeniewska.com) i odśwież stronę
+   (Ctrl+F5, na Macu Cmd+Shift+R). Sprawdź też na telefonie.
+
+### Coś wygląda źle? Przywróć poprzednią wersję
+
+1. W folderze Pobrane zmień nazwę pliku `index-poprzedni.html` z powrotem na `index.html`
+   (najpierw usuń albo przenieś nieudany plik o tej nazwie).
+2. Wgraj go na GitHuba tak samo jak wyżej (**Add file → Upload files** → **Commit changes**).
+   Po 1–2 minutach strona wróci do poprzedniego wyglądu.
+
+### Nowe zdjęcie lub okładka
+
+1. Przygotuj plik JPG do około 300 KB. Nazwa bez polskich liter i spacji, np. `okladka-nowy-tomik.jpg`.
+2. Na GitHubie otwórz folder [img](https://github.com/PaulinaKorzeniewska/strona/tree/main/img), kliknij
+   **Add file → Upload files**, przeciągnij zdjęcie i kliknij **Commit changes**.
+3. Potem poproś Claude jak wyżej, np.: „Dodaj w Poezji nowy tomik: tytuł …, wydawnictwo …, rok …, okładka img/okladka-nowy-tomik.jpg”.
+
+### Literówka? Poprawka bez Claude
+
+1. Otwórz [index.html na GitHubie](https://github.com/PaulinaKorzeniewska/strona/blob/main/index.html)
+   i kliknij ikonę ołówka (**Edit this file**).
+2. Znajdź tekst (Ctrl+F) i popraw tylko same słowa. Nie usuwaj znaków `<`, `>` ani niczego, co jest między nimi.
+3. Kliknij **Commit changes…**, a w okienku jeszcze raz **Commit changes**.
+
+### Dobre zwyczaje na darmowym koncie
+
+- Za każdym razem pobieraj z GitHuba świeży `index.html`. Ktoś (np. Łukasz) mógł w międzyczasie coś zmienić,
+  a stary plik by to cofnął.
+- Jedna sprawa w jednej rozmowie. Przed zmianami daj znać Łukaszowi.
+- Gdy skończy się limit wiadomości, Claude poinformuje, kiedy znów można pisać.
+- Nigdy nie podawaj Claude haseł. Hasło do GitHuba wpisujesz tylko na github.com.
